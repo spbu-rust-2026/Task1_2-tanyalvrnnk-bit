@@ -3,6 +3,13 @@ fn main() {
     let mut c: i128 = 0;
     loop {
         let mut inp = String::new();
+	if io::stdin().read_line(&mut inp).unwrap() == 0 {
+            break;
+        }
+	let inp = inp.trim();
+        if inp.is_empty() {
+            continue;
+        }
         io::stdin().read_line(&mut inp).unwrap();
         let prov = inp.trim().parse::<i128>();
         if prov.is_err() {
@@ -14,7 +21,7 @@ fn main() {
         if inp == -1 {
             break;
         }
-        if inp < 0 {
+        if inp <= 0 {
             c -= 10_000_000_000_000_000;
             println!("NaN");
             break;
