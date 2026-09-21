@@ -10,8 +10,7 @@ fn main() {
         if inp.is_empty() {
             continue;
         }
-        io::stdin().read_line(&mut inp).unwrap();
-        let prov = inp.trim().parse::<i128>();
+        let prov = inp.parse::<i128>();
         if prov.is_err() {
             c -= 10_000_000_000_000_000;
             println!("NaN");
