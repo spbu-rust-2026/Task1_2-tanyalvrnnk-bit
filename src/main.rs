@@ -3,10 +3,10 @@ fn main() {
     let mut c: i128 = 0;
     loop {
         let mut inp = String::new();
-	if io::stdin().read_line(&mut inp).unwrap() == 0 {
+        if io::stdin().read_line(&mut inp).unwrap() == 0 {
             break;
         }
-	let inp = inp.trim();
+        let inp = inp.trim();
         if inp.is_empty() {
             continue;
         }
